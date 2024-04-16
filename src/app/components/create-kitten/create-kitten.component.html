@@ -1,0 +1,52 @@
+<form #signUp="ngForm" (ngSubmit)="creatKitten()">
+  
+    <fieldset>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" [(ngModel)] = "newKitten.name" #name="ngModel" required minlength="3" maxlength="15">
+    </fieldset>
+  
+
+  <div *ngIf="signUp.submitted && name.errors">
+    <span *ngIf="name.errors?.['required']">Le nom est requis</span>
+    <span *ngIf="name.errors?.['minlength']">Le nom doit comporter au moins 3 caractères</span>
+    <span *ngIf="name.errors?.['maxlength']">Le nom ne doit pas dépasser 15 caractères</span>
+  </div>
+  
+    <fieldset>
+        <label for="breed">Breed</label>
+        <input id="breed" name="breed" type="text" [(ngModel)] = "newKitten.breed" #breed="ngModel" required minlength="3" maxlength="15">
+    </fieldset>
+    
+    
+    <div *ngIf="signUp.submitted && breed.errors">
+        <span *ngIf="breed.errors?.['required']">La race est requis</span>
+        <span *ngIf="breed.errors?.['minlength']">La race doit comporter au moins 3 caractères</span>
+        <span *ngIf="breed.errors?.['maxlength']">La race ne doit pas dépasser 15 caractères</span>
+    </div>
+    
+    <fieldset>
+        <label for="birthday">Email</label>
+        <input id="birthday" name="birthday" [(ngModel)] = "newKitten.birthday" #birthday="ngModel" type="date" required>
+    </fieldset>
+  
+
+  <div *ngIf="signUp.submitted && birthday.errors">
+   <span *ngIf="birthday.errors?.['required']">La date est invalide</span>
+  </div>
+
+  
+  <fieldset>
+    <label for="image">Image</label>
+    <input id="image" name="image" [(ngModel)] = "newKitten.image" #image="ngModel" type="text" required>
+  </fieldset>
+  
+
+  <div *ngIf="signUp.submitted && image.errors">
+    <span *ngIf="image.errors?.['required']">Un lien est requis</span>
+  </div>
+
+
+      <button type="reset">Restaurer</button>
+      <button type="submit">Ajouter un chaton</button>
+  </form>
+

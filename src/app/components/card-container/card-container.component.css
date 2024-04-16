@@ -1,0 +1,22 @@
+.container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 18rem;
+}
+
+h4 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+button {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}

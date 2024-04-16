@@ -1,0 +1,9 @@
+<section>
+<div *ngFor="let oneKitten of newKittens" class="card">
+  <app-card-container 
+  [kittenToChildren]="oneKitten"
+  (kittenCreated)="addKittenToParent($event)"
+  />
+</div>
+  
+</section>

@@ -1,4 +1,7 @@
 form {
-  margin-left: 12rem;
+  margin-left: 32rem;
   width: 24rem;
+}
+input {
+  width: 100%;
 }

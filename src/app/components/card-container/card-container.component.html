@@ -1,10 +1,12 @@
 
 <ng-container *ngIf="kittenToChildren">
     <div class="container">
-    <img [src]="kittenToChildren.image" alt="Image de chat">
-      <h4>Name : {{ kittenToChildren.name }} </h4> 
+    <img (mouseenter)="toggleKittenInfo()" (mouseleave)="toggleKittenInfo()" [src]="kittenToChildren.image" alt="Image de chat">
+    <ng-container *ngIf="showKittenInfo" > 
+    <h4>Name : {{ kittenToChildren.name }} </h4> 
       <p>Breed : {{ kittenToChildren.breed }}</p> 
       <p>birthday : {{ kittenToChildren.birthday }}</p>
-      <button type="button" (click)="addKittenToList()">Adopt me</button> 
+    </ng-container> 
+    <button type="button" (click)="addKittenToList()">Adopt me</button> 
     </div>
 </ng-container>

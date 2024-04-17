@@ -1,14 +1,16 @@
 section {
   display: flex;
+  align-items: flex-start;
   margin-left: 10rem;
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(164, 23, 166, 0.2);
   transition: 0.3s;
   width: 300px;
   margin-left: 2rem;
   margin-bottom: 2rem;
+  border-radius: 20%;
 }
 
 .card:hover {
